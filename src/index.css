@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: 'font1';
+    src: url('/Fonts/SharpGrotesk-Light20.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'font2';
+    src: url('/Fonts/SharpGrotesk-Book20.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'font3';
+    src: url('/Fonts/SharpGrotesk-Medium20.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'font4';
+    src: url('/Fonts/SharpGrotesk-SemiBold20.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'font5';
+    src: url('/Fonts/SharpGrotesk-SemiBold25.woff2') format('woff2');
+}
+
+
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+@theme {
+    /* fonts */
+    --font-font1: "font1", "sans-serif";
+    --font-font2: "font2", "sans-serif";
+    --font-font3: "font3", "sans-serif";
+    --font-font4: "font4", "sans-serif";
+    --font-font5: "font5", "sans-serif";
+    /* color */
+    --color-color-white: #FFFFFF;
+    --color-color-black: #111111;
+    --color-color-blue: #3B3DDA;
+    --color-color-pink: #C04ABC;
+    --color-color-yellow: #FFC20D;
+    --color-color-green: #23CE6B;
+}
+body{
+    background-color: #FFFFFF;
+}
+.custom-easing {
+    transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+/* footer */
+.pulse {
+    animation: pulseAnimation 1.5s ease-out infinite;
+}
+
+@keyframes pulseAnimation {
+    100% {
+        opacity: 0;
+        transform: scale(3);
+    }
+}
+.bg {
+    position: absolute;
+    inset: -200%;
+    background-image: url('/Images/Others/bg-noise.png');
+    pointer-events: none;
+    opacity: 100%;
+    animation: shift 0.2s linear infinite both;
+}
+
+@keyframes shift {
+    0% {
+        transform: translateX(10%) translateY(10%);
+    }
+
+    100% {
+        transform: translateX(-10%) translateY(-10%);
+    }
+}
