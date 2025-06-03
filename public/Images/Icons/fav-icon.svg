@@ -1,13 +1,8 @@
-<svg width="79" height="88" viewBox="0 0 79 88" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M78.5 45.5H30.5V84L35.5 86.5L40.5 87.5L45.5 86.5L63 79.5L78.5 65.5V45.5Z" fill="#BD49B9" stroke="#BD49B9"/>
-<path d="M41 42.5H63.5V40L54.5 35H50.5L41 40.5V42.5Z" fill="#BD49B9"/>
-<path d="M54 31.5V9.5V9H59L73 17L78.5 24V42.5H73L54 31.5Z" fill="#BD49B9"/>
-<path d="M27.5 81V66.5H22L13.5 72.5L14 74.5L23 81H27.5Z" fill="#BD49B9"/>
-<path d="M27.5 59.5V45.5H0.5V64L6 71L11.5 70.5L27.5 59.5Z" fill="#BD49B9"/>
-<path d="M51 30.5V5L43.5 0.5H37L17.5 9L6.5 17.5L0.5 24.5V41L3 42.5H32L51 30.5Z" fill="#BD49B9"/>
-<path d="M41 42.5H63.5V40L54.5 35H50.5L41 40.5V42.5Z" stroke="#BD49B9"/>
-<path d="M54 31.5V9.5V9H59L73 17L78.5 24V42.5H73L54 31.5Z" stroke="#BD49B9"/>
-<path d="M27.5 81V66.5H22L13.5 72.5L14 74.5L23 81H27.5Z" stroke="#BD49B9"/>
-<path d="M27.5 59.5V45.5H0.5V64L6 71L11.5 70.5L27.5 59.5Z" stroke="#BD49B9"/>
-<path d="M51 30.5V5L43.5 0.5H37L17.5 9L6.5 17.5L0.5 24.5V41L3 42.5H32L51 30.5Z" stroke="#BD49B9"/>
+<svg width="184" height="183" viewBox="0 0 184 183" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M92 2C141.716 2 182 42.0808 182 91.5C182 140.919 141.716 181 92 181C42.2841 181 2 140.919 2 91.5C2 42.0808 42.2841 2 92 2Z" fill="white" stroke="black" stroke-width="4"/>
+<circle cx="91.5" cy="86.5" r="47.5" fill="black"/>
+<circle cx="91.5" cy="86.5" r="47.5" stroke="black"/>
+<path d="M102.5 164C23.0936 174.517 2.5 95.5 2.5 95.5C2.5 95.5 10.5 190.5 102.5 180.5C188.265 171.178 180.5 80.5 180.5 80.5C180.5 80.5 178 154 102.5 164Z" fill="#BDBDBD" stroke="#BDBDBD"/>
+<path d="M92 2C141.716 2 182 42.0808 182 91.5C182 140.919 141.716 181 92 181C42.2841 181 2 140.919 2 91.5C2 42.0808 42.2841 2 92 2Z" stroke="black" stroke-width="4"/>
+<circle cx="61" cy="56" r="16.25" fill="white" stroke="black" stroke-width="1.5"/>
 </svg>

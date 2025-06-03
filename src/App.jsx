@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import HomePage from "./Pages/HomePage";
 import Navbar from "./Components/Navbar";
 import LenisSmoothScroll from "./Utils/LenisSmoothScroll";
@@ -11,21 +11,23 @@ import Bg from "./Components/Bg";
 import MouseMovingStop from "./Components/MouseMovingStop";
 
 const App = () => {
+    const Projects = useRef([])
+    const mouseScale = useRef([])
     return (
         <div>
             <div className="w-full h-screen fixed px-[18px] z-[999999999] pointer-events-none">
                 <Bg />
             </div>
             <ScrollProgressBar />
-            <MouseFollower />
+            <MouseFollower Projects={Projects} mouseScale={mouseScale}/>
             <MouseMovingStop />
             <LenisSmoothScroll>
-                <Navbar />
+                <Navbar mouseScale={mouseScale} />
                 <Routes>
-                    <Route path="/" element={<HomePage />} />
+                    <Route path="/" element={<HomePage Projects={Projects} />} />
                     <Route path="/about/" element={<AboutPage />} />
                 </Routes>
-                <Contact />
+                <Contact mouseScale={mouseScale} />
             </LenisSmoothScroll>
         </div>
     );

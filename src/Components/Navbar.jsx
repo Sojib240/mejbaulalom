@@ -3,10 +3,9 @@ import { Link, NavLink, useNavigate } from "react-router-dom";
 import PageAnimation from "./PageAnimation";
 import { useLocation } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({ mouseScale }) => {
     const [navbarScroll, setNavbarScroll] = useState(true);
     const [showOnLoad, setShowOnLoad] = useState(true);
-    const navigation = useNavigate();
 
     useEffect(() => {
         // Force visible on initial load
@@ -63,19 +62,23 @@ const Navbar = () => {
                         : "-translate-y-full"
                 }`}
             >
-                <Link
-                    to={"/"}
-                    onClick={triggerAnimation}
-                    className="logo font-font4 text-xl md:text-[22px] xl:text-2xl uppercase w-1/3 whitespace-nowrap"
-                >
-                    Mejbaul a.
-                </Link>
+                <div className="w-1/3">
+                    <Link
+                        to={"/"}
+                        ref={(el) => (mouseScale.current[1] = el)}
+                        onClick={triggerAnimation}
+                        className="logo font-font4 text-xl md:text-[22px] xl:text-2xl uppercase whitespace-nowrap select-none"
+                    >
+                        Mejbaul a.
+                    </Link>
+                </div>
 
                 <div className="w-auto md:w-1/3 flex justify-end md:justify-center items-center">
                     <NavLink
                         to="/about/"
+                        ref={(el) => (mouseScale.current[2] = el)}
                         onClick={triggerAnimation}
-                        className={`cursor-pointer custom-easing font-font2 text-sm lg:text-base xl:text-lg relative pl-4 group py-1`}
+                        className="cursor-pointer custom-easing font-font2 text-sm lg:text-base xl:text-lg relative pl-4 group py-1 select-none"
                     >
                         {({ isActive }) => (
                             <>
@@ -100,7 +103,8 @@ const Navbar = () => {
                 <div className="w-auto md:w-1/3 hidden md:flex justify-end items-center">
                     <button
                         onClick={triggerAnimation}
-                        className="cursor-pointer custom-easing font-font2 text-sm lg:text-base xl:text-lg relative pl-4 group py-1"
+                        ref={(el) => (mouseScale.current[3] = el)}
+                        className="cursor-pointer custom-easing font-font2 text-sm lg:text-base xl:text-lg relative pl-4 group py-1 select-none"
                     >
                         <span
                             className={`w-1.5 h-1.5 bg-color-black rounded-full absolute top-1/2 left-0 -translate-y-1/2 group-hover:scale-[2.3] custom-easing ${
@@ -109,9 +113,7 @@ const Navbar = () => {
                                     : "bg-color-black"
                             }`}
                         />
-                        <span className="block leading-[100%]">
-                            Contact
-                        </span>
+                        <span className="block leading-[100%]">Contact</span>
                     </button>
                 </div>
             </div>

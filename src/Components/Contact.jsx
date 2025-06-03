@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Marquee from "./Marquee";
 
-const Contact = () => {
+const Contact = ({ mouseScale }) => {
     const scrollToTop = () => {
         window.scrollTo({ top: 0, behavior: "smooth" });
     };
@@ -32,6 +32,9 @@ const Contact = () => {
                             return (
                                 <div
                                     key={idx}
+                                    ref={(el) =>
+                                        (mouseScale.current[4 * idx] = el)
+                                    }
                                     className="border rounded-full px-4.5 lg:px-8 py-1.5 lg:py-2 w-max relative overflow-hidden group cursor-pointer"
                                 >
                                     <p className="text-base lg:text-xl xl:text-3xl font-font1 group-hover:text-color-white custom-easing transition-colors z-20">
@@ -45,21 +48,25 @@ const Contact = () => {
                 </div>
                 <div className="pb-4.5 sm:pb-5.5 md:pb-7">
                     <div className="text-center w-full flex justify-between items-center">
-                        <Link
-                            to={"/"}
-                            className="logo font-font4 text-2xl uppercase w-1/4 text-left whitespace-nowrap"
-                        >
-                            Mejbaul a.
-                        </Link>
+                        <div className="w-1/4 text-left">
+                            <Link
+                                to={"/"}
+                                ref={(el) => (mouseScale.current[9] = el)}
+                                className="logo font-font4 text-2xl uppercase whitespace-nowrap"
+                            >
+                                Mejbaul a.
+                            </Link>
+                        </div>
                         <div className="hidden sm:flex items-center justify-center gap-2.5 lg:gap-3 xl:gap-4 text-xs lg:text-sm xl:text-base font-font1 w-full">
                             Available for a full-time position
-                            <div className="relative w-[8px] h-[8px] rounded-full bg-color-green">
-                                <span className="pulse absolute top-1/2 left-1/2 -translate-1/2 w-full h-full bg-color-green rounded-full opacity-80" />
+                            <div className="relative w-[8px] h-[8px] rounded-full bg-color-pink">
+                                <span className="pulse absolute top-1/2 left-1/2 -translate-1/2 w-full h-full bg-color-pink rounded-full opacity-80" />
                             </div>
                         </div>
                         <div className="w-1/4 flex justify-end">
                             <button
                                 onClick={scrollToTop}
+                                ref={(el) => (mouseScale.current[10] = el)}
                                 className="cursor-pointer w-3.5 lg:w-4 xl:w-5"
                             >
                                 <img
@@ -72,8 +79,8 @@ const Contact = () => {
                     </div>
                     <div className="sm:hidden flex items-center justify-center gap-2.5 lg:gap-3 xl:gap-4 text-xs lg:text-sm xl:text-base font-font1 w-full mt-2.5">
                         Available for a full-time position
-                        <div className="relative w-[8px] h-[8px] rounded-full bg-color-green">
-                            <span className="pulse absolute top-1/2 left-1/2 -translate-1/2 w-full h-full bg-color-green rounded-full opacity-80" />
+                        <div className="relative w-1.5 h-1.5 sm:w-[8px] sm:h-[8px] rounded-full bg-color-pink">
+                            <span className="pulse absolute top-1/2 left-1/2 -translate-1/2 w-full h-full bg-color-pink rounded-full opacity-80" />
                         </div>
                     </div>
                 </div>
