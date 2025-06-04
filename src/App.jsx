@@ -19,7 +19,6 @@ const App = () => {
             <div className="w-full h-screen fixed px-[18px] z-[999999999] pointer-events-none">
                 <Bg />
             </div>
-            <Frame />
             <ScrollProgressBar />
             {/* <LoadingAnimation /> */}
             <MouseFollower Projects={Projects} mouseScale={mouseScale} />
