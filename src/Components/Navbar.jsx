@@ -113,7 +113,7 @@ const Navbar = ({ mouseScale }) => {
                                     : "bg-color-black"
                             }`}
                         />
-                        <span className="block leading-[100%]">Contact</span>
+                        <span className="block leading-[100%]">Connect</span>
                     </button>
                 </div>
             </section>

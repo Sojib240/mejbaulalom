@@ -28,7 +28,7 @@ useEffect(() => {
     const showView = () => gsap.to(viewDiv, { scale: 1, opacity: 1, duration: 0.3 });
     const hideView = () => gsap.to(viewDiv, { scale: 0, opacity: 0, duration: 0.3 });
 
-    const enlargeScaleDiv = () => gsap.to(scaleDiv, { scale: 3, duration: 0.3, ease: "power3.out" });
+    const enlargeScaleDiv = () => gsap.to(scaleDiv, { scale: 4, duration: 0.3, ease: "power3.out" });
     const resetScaleDiv = () => gsap.to(scaleDiv, { scale: 1, duration: 0.3, ease: "power3.out" });
 
     // Attach hover effects to projects
@@ -63,18 +63,18 @@ useEffect(() => {
     return (
         <div
             ref={mouseFollowRef}
-            className="fixed top-0 left-0 z-[999999] pointer-events-none select-none w-32 h-32 hidden lg:block"
+            className="fixed top-0 left-0 z-[99999] mix-blend-difference pointer-events-none select-none xl:w-28 w-26 h-26 xl:h-28 2xl:w-32 2xl:h-32 hidden lg:block"
             style={{ transform: "translate(-50%,-50%)" }}
         >
             <div
                 ref={viewDivRef}
-                className="w-full h-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-color-yellow text-color-black flex justify-center items-center font-font5 text-xl uppercase pointer-events-none z-50 opacity-0 scale-0"
+                className="w-full h-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-color-yellow text-color-white flex justify-center items-center font-font5 lg:text-base xl:text-lg 2xl:text-xl uppercase pointer-events-none z-50 opacity-0 scale-0"
             >
                 <p>View</p>
             </div>
             <div
                 ref={scaleDivRef}
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-5 h-5 rounded-full pointer-events-none z-40 bg-color-yellow"
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-5 h-5 rounded-full pointer-events-none z-40 bg-color-white"
             />
         </div>
     );

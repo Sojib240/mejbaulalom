@@ -8,7 +8,7 @@ const Contact = ({ mouseScale }) => {
     };
 
     return (
-        <section className="relative z-[99]  bg-color-white select-none">
+        <section className="relative contact z-[99]  bg-color-white select-none">
             <Marquee
                 texts={"• Let's talk about your next project •"}
                 bg={"bg-color-pink"}

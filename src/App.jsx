@@ -8,23 +8,28 @@ import { Route, Routes } from "react-router-dom";
 import ScrollProgressBar from "./Components/ScrollProgressBar";
 import MouseFollower from "./Components/MouseFollower";
 import Bg from "./Components/Bg";
-import MouseMovingStop from "./Components/MouseMovingStop";
+import LoadingAnimation from "./Components/LoadingAnimation";
+import Frame from "./Components/Frame";
 
 const App = () => {
-    const Projects = useRef([])
-    const mouseScale = useRef([])
+    const Projects = useRef([]);
+    const mouseScale = useRef([]);
     return (
         <div>
             <div className="w-full h-screen fixed px-[18px] z-[999999999] pointer-events-none">
                 <Bg />
             </div>
+            <Frame />
             <ScrollProgressBar />
-            <MouseFollower Projects={Projects} mouseScale={mouseScale}/>
-            {/* <MouseMovingStop /> */}
+            {/* <LoadingAnimation /> */}
+            <MouseFollower Projects={Projects} mouseScale={mouseScale} />
             <LenisSmoothScroll>
                 <Navbar mouseScale={mouseScale} />
                 <Routes>
-                    <Route path="/" element={<HomePage Projects={Projects} />} />
+                    <Route
+                        path="/"
+                        element={<HomePage Projects={Projects} />}
+                    />
                     <Route path="/about/" element={<AboutPage />} />
                 </Routes>
                 <Contact mouseScale={mouseScale} />

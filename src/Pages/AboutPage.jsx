@@ -3,7 +3,7 @@ import gsap from "gsap";
 import React, { useEffect, useRef, useState } from "react";
 
 const AboutPage = () => {
-    document.title = "About | Mejbaul Alom";
+    document.title = "About ― Mejbaul Alom Sojib";
     // scroll trigger section
     const AboutPageMainRef = useRef(null);
     // useGSAP(() => {
@@ -32,7 +32,7 @@ const AboutPage = () => {
     return (
         <section
             ref={AboutPageMainRef}
-            className="bg-color-black z-20 px-5 sm:px-6 md:px-8 lg:px-10 pb-10 lg:pb-16 xl:pb-26 2xl:pb-24 pt-30 md:pt-32 lg:pt-35 xl:pt-45 text-color-white select-none min-h-[70vh] h-full"
+            className="bg-color-black z-20 px-5 sm:px-6 md:px-8 lg:px-10 pb-16 lg:pb-20 xl:pb-26 pt-27 md:pt-32 lg:pt-35 xl:pt-45 text-color-white select-none min-h-[60vh] h-full flex justify-center items-center"
         >
             <div className="flex lg:flex-row flex-col gap-12 lg:gap-0 text-xl sm:text-[22px] xl:text-2xl 2xl:text-[26px] uppercase">
                 <div className="w-full sm:w-[70%] md:w-[53%] lg:w-[45%] pr-0 lg:pr-[12vw] xl:pr-[14vw] 2xl:pr-[16vw]">
