@@ -7,7 +7,7 @@ const WorkSection = ({Projects}) => {
     const [projectData] = useContext(NewsContext);
 
     return (
-        <section className="bg-color-black relative z-50">
+        <section className="bg-color-black relative z-50 select-none">
             <Marquee texts={"• Some of my best works •"} bg={"bg-color-blue"} />
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-5 gap-y-10 lg:gap-y-8 lg:gap-x-6 xl:gap-y-10 xl:gap-x-8 2xl:gap-x-10 2xl:gap-y-12 px-0 lg:px-6 xl:px-8 2xl:px-10 py-11 lg:py-15 xl:py-18 2xl:py-20">

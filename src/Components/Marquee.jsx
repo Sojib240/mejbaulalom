@@ -21,10 +21,10 @@ const Marquee = ({ bg = "", texts = "• Some of my best works •" }) => {
   }, []);
 
   return (
-    <div className={`overflow-hidden ${bg}`}>
+    <div className={`overflow-hidden select-none ${bg}`}>
       <div
         ref={marqueeRef}
-        className="flex whitespace-nowrap text-xl lg:text-2xl xl:text-[26px] 2xl:text-[28px] font-font3 py-7 md:py-8 lg:py-9 xl:py-10 text-color-white"
+        className="flex whitespace-nowrap text-xl lg:text-2xl xl:text-[26px] 2xl:text-[28px] font-font3 py-6 md:py-8 lg:py-9 xl:py-10 text-color-white"
       >
         {/* Duplicate content for seamless scroll */}
         {[...Array(2)].map((_, i) => (

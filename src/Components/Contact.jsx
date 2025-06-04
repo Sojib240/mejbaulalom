@@ -8,7 +8,7 @@ const Contact = ({ mouseScale }) => {
     };
 
     return (
-        <section className="relative z-[99]  bg-color-white">
+        <section className="relative z-[99]  bg-color-white select-none">
             <Marquee
                 texts={"• Let's talk about your next project •"}
                 bg={"bg-color-pink"}
@@ -67,7 +67,7 @@ const Contact = ({ mouseScale }) => {
                             <button
                                 onClick={scrollToTop}
                                 ref={(el) => (mouseScale.current[10] = el)}
-                                className="cursor-pointer w-3.5 lg:w-4 xl:w-5"
+                                className="cursor-pointer w-4 xl:w-5"
                             >
                                 <img
                                     className="w-full"

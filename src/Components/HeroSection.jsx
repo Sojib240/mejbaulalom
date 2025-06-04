@@ -9,23 +9,29 @@ const HeroSection = () => {
     // scroll trigger section
     const HeroMainRef = useRef(null);
     useGSAP(() => {
-        gsap.to(HeroMainRef.current, {
-            scrollTrigger: {
-                trigger: HeroMainRef.current,
-                start: "top top",
-                end: "250% top",
-                scrub: true,
-                // markers: true,
-            },
-            y: "70%",
+        const mm = gsap.matchMedia(); // Initialize matchMedia
+
+        mm.add("(min-width: 1023px)", () => {
+            gsap.to(HeroMainRef.current, {
+                scrollTrigger: {
+                    trigger: HeroMainRef.current,
+                    start: "top top",
+                    end: "250% top",
+                    scrub: true,
+                    // markers: true,
+                },
+                y: "70%",
+            });
         });
+
+        return () => mm.revert(); // Cleanup matchMedia on component unmount
     }, []);
     // landing animation
     const homeWordsRef = useRef([]);
 
     useGSAP(() => {
         gsap.from(homeWordsRef.current, {
-            scale:0.8,
+            scale: 0.8,
             opacity: 0,
             ease: "elastic.out(1, 0.2)",
             stagger: {

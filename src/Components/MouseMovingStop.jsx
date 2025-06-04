@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from "react";
 const MouseMovingStop = ({ startTracking = true }) => {
     const [isMoving, setIsMoving] = useState(true); // Assume active at start
     const timeoutRef = useRef(null);
-    const delay = 30000;
+    const delay = 1000;
 
     useEffect(() => {
         if (!startTracking) return;
@@ -32,7 +32,7 @@ const MouseMovingStop = ({ startTracking = true }) => {
 
     return (
         <div
-            className={`fixed top-0 w-full h-screen left-0 z-[99999999] custom-easing transition-opacity duration-500 bg-color-yellow ${
+            className={`fixed top-0 w-full h-screen left-0 z-[99999999] custom-easing transition-opacity duration-500 bg-color-pink ${
                 isMoving
                     ? "opacity-0 pointer-events-none"
                     : "opacity-100 pointer-events-auto"

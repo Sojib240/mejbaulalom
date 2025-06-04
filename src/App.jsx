@@ -20,7 +20,7 @@ const App = () => {
             </div>
             <ScrollProgressBar />
             <MouseFollower Projects={Projects} mouseScale={mouseScale}/>
-            <MouseMovingStop />
+            {/* <MouseMovingStop /> */}
             <LenisSmoothScroll>
                 <Navbar mouseScale={mouseScale} />
                 <Routes>

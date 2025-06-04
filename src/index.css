@@ -41,10 +41,9 @@ body::-webkit-scrollbar {
     /* color */
     --color-color-white: #FFFFFF;
     --color-color-black: #111111;
-    --color-color-blue: #3B3DDA;
-    --color-color-pink: #C04ABC;
+    --color-color-blue: #2160FF;
+    --color-color-pink: #D94077;
     --color-color-yellow: #FFC20D;
-    /* --color-color-green: #23CE6B; */
 }
 
 body {
@@ -72,7 +71,7 @@ body {
     inset: -200%;
     background-image: url('/Images/Others/bg-noise.png');
     pointer-events: none;
-    opacity: 90%;
+    opacity: 80%;
     animation: shift 0.2s linear infinite both;
 }
 
@@ -86,8 +85,8 @@ body {
     }
 }
 
-@media (max-width:1023px) {
+/* @media (max-width:1023px) {
     .bg {
         opacity: 60%;
     }
-}
+} */

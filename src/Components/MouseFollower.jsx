@@ -8,70 +8,62 @@ const MouseFollower = ({ Projects, mouseScale }) => {
     const scaleDivRef = useRef();
     const { pathname } = useLocation();
 
-    useEffect(() => {
-        const mouseFollow = mouseFollowRef.current;
-        const viewDiv = viewDivRef.current;
-        const scaleDiv = scaleDivRef.current;
-        if (!mouseFollow || !viewDiv || !scaleDiv) return;
+useEffect(() => {
+    if (window.innerWidth <= 1024) return; // Prevents execution when width is 1024px or smaller
 
-        // Smooth mouse tracking
-        const xTo = gsap.quickTo(mouseFollow, "x", {
-            duration: 0.8,
-            ease: "power3.out",
-        });
-        const yTo = gsap.quickTo(mouseFollow, "y", {
-            duration: 0.8,
-            ease: "power3.out",
-        });
+    const mouseFollow = mouseFollowRef.current;
+    const viewDiv = viewDivRef.current;
+    const scaleDiv = scaleDivRef.current;
+    if (!mouseFollow || !viewDiv || !scaleDiv) return;
 
-        const handleMove = (e) => {
-            xTo(e.clientX);
-            yTo(e.clientY);
-        };
+    // Smooth mouse tracking
+    const xTo = gsap.quickTo(mouseFollow, "x", { duration: 0.8, ease: "power3.out" });
+    const yTo = gsap.quickTo(mouseFollow, "y", { duration: 0.8, ease: "power3.out" });
 
-        const showView = () =>
-            gsap.to(viewDiv, { scale: 1, opacity: 1, duration: 0.3 });
-        const hideView = () =>
-            gsap.to(viewDiv, { scale: 0, opacity: 0, duration: 0.3 });
+    const handleMove = (e) => {
+        xTo(e.clientX);
+        yTo(e.clientY);
+    };
 
-        const enlargeScaleDiv = () =>
-            gsap.to(scaleDiv, { scale: 3, duration: 0.3, ease: "power3.out" });
-        const resetScaleDiv = () =>
-            gsap.to(scaleDiv, { scale: 1, duration: 0.3, ease: "power3.out" });
+    const showView = () => gsap.to(viewDiv, { scale: 1, opacity: 1, duration: 0.3 });
+    const hideView = () => gsap.to(viewDiv, { scale: 0, opacity: 0, duration: 0.3 });
 
-        // Attach hover effects to projects
+    const enlargeScaleDiv = () => gsap.to(scaleDiv, { scale: 3, duration: 0.3, ease: "power3.out" });
+    const resetScaleDiv = () => gsap.to(scaleDiv, { scale: 1, duration: 0.3, ease: "power3.out" });
+
+    // Attach hover effects to projects
+    Projects.current.filter(Boolean).forEach((el) => {
+        el.addEventListener("mouseenter", showView);
+        el.addEventListener("mouseleave", hideView);
+    });
+
+    // Attach hover effects to mouseScale elements
+    mouseScale.current.filter(Boolean).forEach((el) => {
+        el.addEventListener("mouseenter", enlargeScaleDiv);
+        el.addEventListener("mouseleave", resetScaleDiv);
+    });
+
+    document.addEventListener("pointermove", handleMove);
+
+    return () => {
         Projects.current.filter(Boolean).forEach((el) => {
-            el.addEventListener("mouseenter", showView);
-            el.addEventListener("mouseleave", hideView);
+            el.removeEventListener("mouseenter", showView);
+            el.removeEventListener("mouseleave", hideView);
         });
 
-        // Attach hover effects to mouseScale elements
         mouseScale.current.filter(Boolean).forEach((el) => {
-            el.addEventListener("mouseenter", enlargeScaleDiv);
-            el.addEventListener("mouseleave", resetScaleDiv);
+            el.removeEventListener("mouseenter", enlargeScaleDiv);
+            el.removeEventListener("mouseleave", resetScaleDiv);
         });
 
-        document.addEventListener("pointermove", handleMove);
-
-        return () => {
-            Projects.current.filter(Boolean).forEach((el) => {
-                el.removeEventListener("mouseenter", showView);
-                el.removeEventListener("mouseleave", hideView);
-            });
-
-            mouseScale.current.filter(Boolean).forEach((el) => {
-                el.removeEventListener("mouseenter", enlargeScaleDiv);
-                el.removeEventListener("mouseleave", resetScaleDiv);
-            });
-
-            document.removeEventListener("pointermove", handleMove);
-        };
-    }, [Projects, mouseScale, pathname]);
+        document.removeEventListener("pointermove", handleMove);
+    };
+}, [Projects, mouseScale, pathname]);
 
     return (
         <div
             ref={mouseFollowRef}
-            className="fixed top-0 left-0 z-[999999] pointer-events-none select-none w-32 h-32"
+            className="fixed top-0 left-0 z-[999999] pointer-events-none select-none w-32 h-32 hidden lg:block"
             style={{ transform: "translate(-50%,-50%)" }}
         >
             <div

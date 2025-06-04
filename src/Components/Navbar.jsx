@@ -50,7 +50,7 @@ const Navbar = ({ mouseScale }) => {
     return (
         <>
             {/* <PageAnimation animationKey={animationKey} /> */}
-            <div
+            <section
                 id="back-to-top"
                 className={`fixed top-0 h-20 md:h-22 flex justify-between ${
                     pathname == "/about/"
@@ -73,7 +73,7 @@ const Navbar = ({ mouseScale }) => {
                     </Link>
                 </div>
 
-                <div className="w-auto md:w-1/3 flex justify-end md:justify-center items-center">
+                <div className="w-auto md:w-1/3 flex justify-end md:justify-center items-center select-none">
                     <NavLink
                         to="/about/"
                         ref={(el) => (mouseScale.current[2] = el)}
@@ -116,7 +116,7 @@ const Navbar = ({ mouseScale }) => {
                         <span className="block leading-[100%]">Contact</span>
                     </button>
                 </div>
-            </div>
+            </section>
         </>
     );
 };
