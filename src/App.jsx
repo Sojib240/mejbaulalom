@@ -9,7 +9,6 @@ import ScrollProgressBar from "./Components/ScrollProgressBar";
 import MouseFollower from "./Components/MouseFollower";
 import Bg from "./Components/Bg";
 import LoadingAnimation from "./Components/LoadingAnimation";
-import Frame from "./Components/Frame";
 
 const App = () => {
     const Projects = useRef([]);
