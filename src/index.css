@@ -24,6 +24,7 @@
     font-family: 'font5';
     src: url('/Fonts/SharpGrotesk-SemiBold25.woff2') format('woff2');
 }
+
 @font-face {
     font-family: 'font6';
     src: url('/public/Fonts/Tusker-Grotesk.woff2') format('woff2');
@@ -46,9 +47,10 @@ body::-webkit-scrollbar {
     /* color */
     --color-color-white: #FFFFFF;
     --color-color-black: #000000;
-    --color-color-blue: #2160FF;
-    --color-color-pink: #D94077;
+    --color-color-blue: #4911F9;
+    --color-color-pink: #BD49B9;
     --color-color-yellow: #FFC20D;
+    --color-color-green: #B3EB16;
 }
 
 body {
@@ -58,8 +60,15 @@ body {
 .custom-easing {
     transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
+
 .custom-easing2 {
     transition: 1s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.custom-easing3 {
+    /* transition-property: transform, filter; */
+    transition-duration: 1s;
+    transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 /* footer */

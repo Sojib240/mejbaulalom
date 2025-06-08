@@ -1,17 +1,15 @@
 import React from "react";
-import PageTransition from "../Components/PageTransition";
 import HeroSection from "../Components/HeroSection";
 import WorkSection from "../Components/WorkSection";
 
-const HomePage = ({Projects}) => {
+const HomePage = ({ Projects}) => {
     document.title = "Mejbaul Alom ― Frontend Developer";
     return (
-        // <PageTransition>
         <>
-            <HeroSection />
+            <HeroSection
+            />
             <WorkSection Projects={Projects} />
         </>
-        // </PageTransition>
     );
 };
 

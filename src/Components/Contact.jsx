@@ -6,9 +6,16 @@ const Contact = ({ mouseScale }) => {
     const scrollToTop = () => {
         window.scrollTo({ top: 0, behavior: "smooth" });
     };
+    const social = [
+        { title: "Email", link: "mailto:" },
+        { title: "Facebook", link: "" },
+        { title: "Github", link: "" },
+        { title: "Linkedin", link: "" },
+        { title: "Whatsapp", link: "" },
+    ];
 
     return (
-        <section className="relative contact z-[99]  bg-color-white select-none">
+        <section className="relative contact z-50 bg-color-white select-none">
             <Marquee
                 texts={"• Let's talk about your next project •"}
                 bg={"bg-color-pink"}
@@ -22,26 +29,20 @@ const Contact = ({ mouseScale }) => {
                         </h2>
                     </div>
                     <div className="flex justify-center flex-wrap  items-center gap-3 lg:gap-4 xl:gap-5">
-                        {[
-                            "Email",
-                            "Facebook",
-                            "Github",
-                            "Linkedin",
-                            "Whatsapp",
-                        ].map((char, idx) => {
+                        {social.map((char,idx) => {
                             return (
-                                <div
+                                <a
                                     key={idx}
                                     ref={(el) =>
                                         (mouseScale.current[4 * idx] = el)
                                     }
-                                    className="border rounded-full px-4.5 lg:px-8 py-1.5 lg:py-2 w-max relative overflow-hidden group cursor-pointer"
+                                    className="border rounded-full px-4.5 lg:px-8 py-1.5 lg:py-2 w-max relative overflow-hidden group cursor-pointer z-[99]"
                                 >
-                                    <p className="text-base lg:text-xl xl:text-3xl font-font1 group-hover:text-color-white custom-easing transition-colors z-20">
-                                        {char}
+                                    <p className="text-base lg:text-xl xl:text-3xl font-font1 group-hover:text-color-white custom-easing2 transition-colors z-20">
+                                        {char.title}
                                     </p>
-                                    <span className="w-full h-full scale-y-0 origin-bottom  group-hover:scale-y-100 custom-easing bg-color-black absolute top-0 left-0 rounded-none z-[-1]" />
-                                </div>
+                                    <span className="w-1/4 aspect-square scale-0  group-hover:scale-[4.25] custom-easing2 bg-color-black absolute top-1/2 left-1/2 -translate-1/2 rounded-full z-[-1]" />
+                                </a>
                             );
                         })}
                     </div>
@@ -54,7 +55,7 @@ const Contact = ({ mouseScale }) => {
                                 ref={(el) => (mouseScale.current[9] = el)}
                                 className="logo font-font4 text-2xl uppercase whitespace-nowrap"
                             >
-                                Mejbaul a.
+                                Mejbaul ― a.
                             </Link>
                         </div>
                         <div className="hidden sm:flex items-center justify-center gap-2.5 lg:gap-3 xl:gap-4 text-xs lg:text-sm xl:text-base font-font1 w-full">

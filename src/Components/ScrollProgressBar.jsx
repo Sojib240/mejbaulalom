@@ -10,7 +10,11 @@ const ScrollProgressBar = () => {
                 document.documentElement.scrollHeight - window.innerHeight;
             const scrollProgress = scrollTop / docHeight;
             if (barRef.current) {
-                barRef.current.style.transform = `scaleY(${scrollProgress})`;
+                if (window.innerWidth >= 768) {
+                    barRef.current.style.transform = `scaleY(${scrollProgress})`;
+                }else{
+                    barRef.current.style.transform = `scaleX(${scrollProgress})`;
+                }
             }
         };
 
@@ -25,7 +29,7 @@ const ScrollProgressBar = () => {
     return (
         <span
             ref={barRef}
-            className="w-1 md:w-1.5 h-screen bg-color-pink fixed top-0 right-0 z-[999] origin-top"
+            className="w-full md:w-[5px] h-1 md:h-screen bg-color-pink fixed bottom-0 md:top-0 md:left-0 z-[9999] origin-top"
         />
     );
 };

@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import Marquee from "./Marquee";
 import { NewsContext } from "../Utils/Context";
-import { Link } from "react-router-dom";
 
 const WorkSection = ({ Projects }) => {
     const [projectData] = useContext(NewsContext);
@@ -23,9 +22,8 @@ const WorkSection = ({ Projects }) => {
                             className="aspect-[4/2.9] block overflow-hidden rounded-0 lg:rounded-[2vw] group"
                         >
                             <img
-                                className="w-full h-full object-cover overflow-hidden brightness-100 transition-all duration-300 ease-in-out 
-                                group-hover:scale-[1.2] 
-                                 group-hover:brightness-60 custom-easing2"
+                                className="w-full h-full object-cover overflow-hidden brightness-100 transition-all duration-300 
+                                group-hover:scale-[1.2]  group-hover:brightness-50 custom-easing3"
                                 src={project.src}
                                 alt={project.title}
                             />

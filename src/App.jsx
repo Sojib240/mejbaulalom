@@ -9,18 +9,20 @@ import ScrollProgressBar from "./Components/ScrollProgressBar";
 import MouseFollower from "./Components/MouseFollower";
 import Bg from "./Components/Bg";
 import LoadingAnimation from "./Components/LoadingAnimation";
+import MouseFollower2 from "./Components/MouseFollower2";
 
 const App = () => {
     const Projects = useRef([]);
     const mouseScale = useRef([]);
     return (
         <div>
-            <div className="w-full h-screen fixed px-[18px] z-[999999999] pointer-events-none">
+            <div className="w-full h-screen fixed px-[18px] z-[99999] pointer-events-none">
                 <Bg />
             </div>
             <ScrollProgressBar />
-            {/* <LoadingAnimation /> */}
+            <LoadingAnimation />
             <MouseFollower Projects={Projects} mouseScale={mouseScale} />
+            {/* <MouseFollower2 Projects={Projects} mouseScale={mouseScale} /> */}
             <LenisSmoothScroll>
                 <Navbar mouseScale={mouseScale} />
                 <Routes>

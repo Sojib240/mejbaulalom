@@ -68,13 +68,13 @@ useEffect(() => {
         >
             <div
                 ref={viewDivRef}
-                className="w-full h-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-color-yellow text-color-white flex justify-center items-center font-font5 lg:text-base xl:text-lg 2xl:text-xl uppercase pointer-events-none z-50 opacity-0 scale-0"
+                className="w-full h-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full bg-color-yellow text-color-white flex justify-center items-center font-font5 lg:text-base xl:text-lg 2xl:text-xl uppercase pointer-events-none z-50 opacity-0 scale-0 border"
             >
                 <p>View</p>
             </div>
             <div
                 ref={scaleDivRef}
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-5 h-5 rounded-full pointer-events-none z-40 bg-color-white"
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-5 h-5 rounded-full pointer-events-none z-40 bg-color-white border border-color-white"
             />
         </div>
     );
