@@ -31,32 +31,29 @@
 }
 
 
-
-body::-webkit-scrollbar {
-    display: none;
-}
-
 @theme {
-    /* fonts */
     --font-font1: "font1", "sans-serif";
     --font-font2: "font2", "sans-serif";
     --font-font3: "font3", "sans-serif";
     --font-font4: "font4", "sans-serif";
     --font-font5: "font5", "sans-serif";
     --font-font6: "font6", "sans-serif";
-    /* color */
     --color-color-white: #FFFFFF;
     --color-color-black: #000000;
     --color-color-blue: #4911F9;
     --color-color-pink: #BD49B9;
     --color-color-yellow: #FFC20D;
-    --color-color-green: #B3EB16;
+    --color-color-green: #cfff49;
+}
+
+body::-webkit-scrollbar {
+    display: none;
 }
 
 body {
     background-color: #FFFFFF;
 }
-
+/* custom easings */
 .custom-easing {
     transition: 0.6s cubic-bezier(0.23, 1, 0.32, 1);
 }
@@ -65,24 +62,7 @@ body {
     transition: 1s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-.custom-easing3 {
-    /* transition-property: transform, filter; */
-    transition-duration: 1s;
-    transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-/* footer */
-.pulse {
-    animation: pulseAnimation 1.5s ease-out infinite;
-}
-
-@keyframes pulseAnimation {
-    100% {
-        opacity: 0;
-        transform: scale(3);
-    }
-}
-
+/* noise animation */
 .bg {
     position: absolute;
     inset: -200%;
@@ -102,6 +82,19 @@ body {
     }
 }
 
+/* footer animation */
+.pulse {
+    animation: pulseAnimation 1.5s ease-out infinite;
+}
+
+@keyframes pulseAnimation {
+    100% {
+        opacity: 0;
+        transform: scale(3);
+    }
+}
+
+/* responsive */
 @media (max-width:1023px) {
     .bg {
         opacity: 50%;

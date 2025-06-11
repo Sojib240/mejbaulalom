@@ -55,7 +55,7 @@ const Navbar = ({ mouseScale }) => {
                 {
                     y: 0,
                     delay: 1.28,
-                    duration: 0.4,
+                    duration: 0.5,
                 }
             );
         });
@@ -65,7 +65,7 @@ const Navbar = ({ mouseScale }) => {
         <>
             <section
                 id="back-to-top"
-                className={`fixed top-0 h-20 md:h-22 flex justify-between text-color-white items-center w-full z-[9999] px-5 sm:px-6 md:px-8 lg:px-10 custom-easing mix-blend-difference ${
+                className={`fixed top-0 h-20 md:h-22 flex justify-between text-color-white items-center w-full z-[9999] px-4 sm:px-6 md:px-8 lg:px-10 custom-easing mix-blend-difference ${
                     navbarScroll || showOnLoad
                         ? "translate-y-0"
                         : "-translate-y-full"
