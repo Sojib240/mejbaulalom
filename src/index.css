@@ -25,25 +25,17 @@
     src: url('/Fonts/SharpGrotesk-SemiBold25.woff2') format('woff2');
 }
 
-@font-face {
-    font-family: 'font6';
-    src: url('/public/Fonts/Tusker-Grotesk.woff2') format('woff2');
-}
-
-
 @theme {
     --font-font1: "font1", "sans-serif";
     --font-font2: "font2", "sans-serif";
     --font-font3: "font3", "sans-serif";
     --font-font4: "font4", "sans-serif";
     --font-font5: "font5", "sans-serif";
-    --font-font6: "font6", "sans-serif";
     --color-color-white: #FFFFFF;
     --color-color-black: #000000;
     --color-color-blue: #4911F9;
     --color-color-pink: #BD49B9;
     --color-color-yellow: #FFC20D;
-    --color-color-green: #cfff49;
 }
 
 body::-webkit-scrollbar {
@@ -60,26 +52,6 @@ body {
 
 .custom-easing2 {
     transition: 1s cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-/* noise animation */
-.bg {
-    position: absolute;
-    inset: -200%;
-    background-image: url('/Images/Others/bg-noise.png');
-    pointer-events: none;
-    opacity: 80%;
-    animation: shift 0.2s linear infinite both;
-}
-
-@keyframes shift {
-    0% {
-        transform: translateX(10%) translateY(10%);
-    }
-
-    100% {
-        transform: translateX(-10%) translateY(-10%);
-    }
 }
 
 /* footer animation */

@@ -44,7 +44,7 @@ const Context = (props) => {
             id: 6,
             title: "Lazeezarg",
             published: "2024",
-            src: "/Images/Thumbnails/IMAGE6.png",
+            src: "/Images/Thumbnails/IMAGE6.jpg",
             direction: "https://lazeezarg.com/",
         },
     ]);

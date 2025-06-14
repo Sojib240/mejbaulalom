@@ -43,7 +43,7 @@ const HeroSection = () => {
         "Hello! I'm Mejbaul Alom a frontend developer and freelancer passionate about building clean, profession -al";
 
     return (
-        <section ref={HeroMainRef} className="relative z-50 select-none">
+        <section ref={HeroMainRef} className="relative select-none">
             <div className="px-3 sm:px-6 md:px-8 lg:px-10 text-center pb-12 lg:pb-18 xl:pb-30 pt-24 md:pt-26 lg:pt-28 xl:pt-30">
                 <div className="font-font5 uppercase text-4xl sm:text-[40px] md:text-[7vw] leading-[110%] md:leading-[100%] flex flex-wrap justify-center gap-x-4 z-[52]">
                     {sentence.split(" ").map((word, idx) => (
