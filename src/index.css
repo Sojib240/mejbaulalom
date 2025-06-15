@@ -65,10 +65,3 @@ body {
         transform: scale(3);
     }
 }
-
-/* responsive */
-@media (max-width:1023px) {
-    .bg {
-        opacity: 50%;
-    }
-}

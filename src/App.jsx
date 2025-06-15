@@ -5,9 +5,7 @@ import LenisSmoothScroll from "./Utils/LenisSmoothScroll";
 import Contact from "./Components/Contact";
 import AboutPage from "./Pages/AboutPage";
 import { Route, Routes } from "react-router-dom";
-import ScrollProgressBar from "./Components/ScrollProgressBar";
 import MouseFollower from "./Components/MouseFollower";
-import Bg from "./Components/Bg";
 import LoadingAnimation from "./Components/LoadingAnimation";
 import MouseFollower2 from "./Components/MouseFollower2";
 
@@ -16,10 +14,6 @@ const App = () => {
     const mouseScale = useRef([]);
     return (
         <div>
-            <div className="w-full h-screen fixed px-[18px] z-[99999] pointer-events-none">
-                <Bg />
-            </div>
-            {/* <ScrollProgressBar /> */}
             <LoadingAnimation />
             <MouseFollower Projects={Projects} mouseScale={mouseScale} />
             <MouseFollower2 />
