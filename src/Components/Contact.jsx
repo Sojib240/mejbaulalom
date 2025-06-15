@@ -6,13 +6,16 @@ const Contact = ({ mouseScale }) => {
     const scrollToTop = () => {
         window.scrollTo({ top: 0, behavior: "smooth" });
     };
-const social = [
-    { title: "Email", link: "mailto:sojib240320@gmail.com" },
-    { title: "Facebook", link: "https://www.facebook.com/share/197eyr4wh3/" },
-    { title: "Github", link: "https://github.com/sojib240" },
-    { title: "Linkedin", link: "" },
-    { title: "Whatsapp", link: "https://wa.me/8801627025159" },
-];
+    const social = [
+        { title: "Email", link: "mailto:sojib240320@gmail.com" },
+        {
+            title: "Facebook",
+            link: "https://www.facebook.com/share/197eyr4wh3/",
+        },
+        { title: "Github", link: "https://github.com/sojib240" },
+        { title: "Linkedin", link: "" },
+        { title: "Whatsapp", link: "https://wa.me/8801627025159" },
+    ];
 
     const contactTextRef = useRef();
 
@@ -36,8 +39,13 @@ const social = [
                         <div className="flex justify-center flex-wrap items-center gap-x-2 gap-y-3 sm:gap-3 lg:gap-4 xl:gap-5 z-50">
                             {social.map((char, idx) => {
                                 return (
-                                    <a href={char.link}
-                                    target="_Blank"
+                                    <a
+                                        href={
+                                            idx === 3
+                                                ? undefined
+                                                : `${char.link}`
+                                        }
+                                        target="_Blank"
                                         key={idx}
                                         ref={(el) =>
                                             (mouseScale.current[4 * idx] = el)

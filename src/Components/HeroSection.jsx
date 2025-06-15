@@ -40,12 +40,12 @@ const HeroSection = () => {
     }, [pathname]);
 
     const sentence =
-        "Hello! I'm Mejbaul Alom a frontend developer passionate about creating profession al web experiences.";
+        "Hello! I'm Mejbaul Alom a frontend developer passionate about creating profession al web experiences";
 
     return (
         <section ref={HeroMainRef} className="relative select-none">
-            <div className="px-3 sm:px-6 md:px-8 lg:px-10 text-center pb-12 lg:pb-18 xl:pb-30 pt-24 md:pt-26 lg:pt-28 xl:pt-30">
-                <div className="font-font5 uppercase text-4xl sm:text-[40px] md:text-[7vw] leading-[110%] md:leading-[100%] flex flex-wrap justify-center gap-x-4 z-[52]">
+            <div className="px-3 sm:px-6 md:px-8 lg:px-10 text-center pb-10 sm:pb-12 lg:pb-18 xl:pb-30 pt-22 sm:pt-24 md:pt-26 lg:pt-28 xl:pt-30">
+                <div className="font-font5 uppercase text-[34px] xs:text-4xl sm:text-[40px] md:text-[7vw] leading-[110%] md:leading-[100%] flex flex-wrap justify-center gap-x-4 z-[52]">
                     {sentence.split(" ").map((word, idx) => (
                         <div key={idx} className="overflow-hidden">
                             <span
