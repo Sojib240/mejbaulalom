@@ -15,13 +15,20 @@ const WorkSection = ({ Projects }) => {
                         className="col-span-1 project relative"
                     >
                         <a
-                            href={`${project.direction}`}
+                            href={index === 4 ? undefined : `${project.direction}`}
                             target="_blank"
                             ref={(el) => (Projects.current[index] = el)}
-                            className="aspect-[4/2.9] block overflow-hidden rounded-0 lg:rounded-[2vw] group"
+                            className={`aspect-[4/2.9] block overflow-hidden rounded-0 lg:rounded-[2vw] group relative 
+        ${index === 4 ? "pointer-events-none cursor-not-allowed" : ""}`}
                         >
+                            {index === 4 ? (
+                                <div className="text-color-white bg-[#00000080] w-full h-full absolute top-0 left-0 right-0 bottom-0 z-20 flex justify-center items-center">
+                                    <p className="uppercase font-font3 text-xl sm:text-2xl xl:text-2xl 2xl:text-3xl">Coming soon</p>
+                                </div>
+                            ) : null}
                             <img
-                                className="w-full h-full object-cover overflow-hidden brightness-100 custom-easing2 group-hover:scale-[1.2] group-hover:brightness-50"
+                                className="w-full h-full object-cover overflow-hidden brightness-100 custom-easing2 
+          group-hover:scale-[1.2] group-hover:brightness-50"
                                 src={project.src}
                                 alt={project.title}
                             />

@@ -6,13 +6,14 @@ const Contact = ({ mouseScale }) => {
     const scrollToTop = () => {
         window.scrollTo({ top: 0, behavior: "smooth" });
     };
-    const social = [
-        { title: "Email", link: "mailto:" },
-        { title: "Facebook", link: "" },
-        { title: "Github", link: "" },
-        { title: "Linkedin", link: "" },
-        { title: "Whatsapp", link: "" },
-    ];
+const social = [
+    { title: "Email", link: "mailto:sojib240320@gmail.com" },
+    { title: "Facebook", link: "https://www.facebook.com/share/197eyr4wh3/" },
+    { title: "Github", link: "https://github.com/sojib240" },
+    { title: "Linkedin", link: "" },
+    { title: "Whatsapp", link: "https://wa.me/8801627025159" },
+];
+
     const contactTextRef = useRef();
 
     return (
@@ -35,7 +36,8 @@ const Contact = ({ mouseScale }) => {
                         <div className="flex justify-center flex-wrap items-center gap-x-2 gap-y-3 sm:gap-3 lg:gap-4 xl:gap-5 z-50">
                             {social.map((char, idx) => {
                                 return (
-                                    <a
+                                    <a href={char.link}
+                                    target="_Blank"
                                         key={idx}
                                         ref={(el) =>
                                             (mouseScale.current[4 * idx] = el)
@@ -45,7 +47,7 @@ const Contact = ({ mouseScale }) => {
                                         <p className="text-base lg:text-xl xl:text-3xl font-font1 group-hover:text-color-white custom-easing2 transition-colors z-20">
                                             {char.title}
                                         </p>
-                                        <span className="w-1/4 aspect-square scale-0  group-hover:scale-[4.25] custom-easing2 bg-color-black absolute top-1/2 left-1/2 -translate-1/2 rounded-full z-[-1]" />
+                                        <span className="w-1/4 aspect-square scale-0 group-hover:scale-[4.25] custom-easing2 bg-color-black absolute top-1/2 left-1/2 -translate-1/2 rounded-full z-[-1]" />
                                     </a>
                                 );
                             })}

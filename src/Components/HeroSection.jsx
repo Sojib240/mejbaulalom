@@ -40,7 +40,7 @@ const HeroSection = () => {
     }, [pathname]);
 
     const sentence =
-        "Hello! I'm Mejbaul Alom a frontend developer and freelancer passionate about building clean, profession -al";
+        "Hello! I'm Mejbaul Alom a frontend developer passionate about creating profession al web experiences.";
 
     return (
         <section ref={HeroMainRef} className="relative select-none">

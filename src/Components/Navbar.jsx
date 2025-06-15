@@ -61,6 +61,13 @@ const Navbar = ({ mouseScale }) => {
         });
     }, [pathname]);
 
+    const scrollToBottom = () => {
+        window.scrollTo({
+            top: document.body.scrollHeight,
+            behavior: "smooth",
+        });
+    };
+
     return (
         <>
             <section
@@ -84,7 +91,7 @@ const Navbar = ({ mouseScale }) => {
                 </div>
 
                 <div className="w-auto md:w-1/3  select-none">
-                    <div className="overflow-hidden flex justify-end md:justify-center items-center">
+                    <div className="flex justify-end md:justify-center items-center">
                         <Link
                             to="/about/"
                             ref={(el) => (mouseScale.current[2] = el)}
@@ -101,8 +108,7 @@ const Navbar = ({ mouseScale }) => {
                     <div className="overflow-hidden flex justify-end items-center">
                         <button
                             onClick={() => {
-                                window.location.href =
-                                    "mailto:sojib240320@gmail.com?subject=Hello&body=I%20want%20to%20connect%20with%20you.";
+                                scrollToBottom()
                             }}
                             ref={(el) => (mouseScale.current[3] = el)}
                             className="cursor-pointer custom-easing font-font2 text-sm lg:text-base xl:text-lg relative pl-4 group py-1 select-none"
