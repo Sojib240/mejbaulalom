@@ -98,11 +98,11 @@ const AboutPage = () => {
 
     return (
         <>
-            <section className="bg-color-black px-5 sm:px-6 md:px-8 lg:px-10 pb-16 lg:pb-20 xl:pb-26 pt-27 md:pt-32 lg:pt-35 xl:pt-45 text-color-white select-none min-h-[60vh] h-full flex justify-center items-center relative z-50">
-                <div className="flex lg:flex-row flex-col gap-12 lg:gap-0 text-xl sm:text-[22px] xl:text-2xl 2xl:text-[26px] uppercase">
-                    <div className="w-full sm:w-[70%] md:w-[53%] lg:w-[45%] pr-0 lg:pr-[12vw] xl:pr-[14vw] 2xl:pr-[16vw]">
+            <section className="bg-color-black px-4 sm:px-6 md:px-8 lg:px-10 pb-16 lg:pb-20 xl:pb-26 pt-27 md:pt-32 lg:pt-35 xl:pt-45 text-color-white select-none min-h-[60vh] h-full flex justify-center items-center relative z-50">
+                <div className="flex lg:flex-row flex-col gap-12 lg:gap-0 text-[19px] xs:text-xl sm:text-[22px] xl:text-2xl 2xl:text-[26px] uppercase">
+                    <div className="w-full sm:w-[70%] md:w-[53%] lg:w-[45%] pr-0 lg:pr-[10vw] xl:pr-[12vw] 2xl:pr-[16vw]">
                         {/*  */}
-                        <div className="mb-9 pr-[1vw]">
+                        <div className="mb-6 pr-[1vw]">
                             {"Currently available for collaborations 🚀"
                                 .split(" ")
                                 .map((words, idx) => {
@@ -166,7 +166,7 @@ const AboutPage = () => {
                         </div>
                         {/*  */}
                         <div className="">
-                            {"My cv is available upon request in PDF format.Please feel free to reach out, and I'll be delighted to share it with you."
+                            {"Whether it's a bold new idea or refining an existing product, I’m here to help turn your vision into a responsive, high-quality web experience."
                                 .split(" ")
                                 .map((words, idx) => {
                                     return (
@@ -191,10 +191,10 @@ const AboutPage = () => {
                         </div>
                         {/*  */}
                     </div>
-                    <div className="w-full lg:w-[55%] pl-0 lg:pl-[1vw] xl:pl-[2vw] 2xl:pl-[3vw]">
+                    <div className="w-full lg:w-[55%] pl-0 xl:pl-[1vw] 2xl:pl-[3vw]">
                         {/*  */}
-                        <div className="pr-0 sm:pr-[10vw]">
-                            {"hi,there I’M Mejbaul alom, frontend developer and freelancer based in bogura, bangladesh"
+                        <div className="pr-0 xl:pr-[5vw]">
+                            {"Hi, I'm Mejbaul alom, a Front-End Web Developer who enjoys building clean, responsive, and engaging websites."
                                 .split(" ")
                                 .map((words, idx) => {
                                     return (
@@ -218,8 +218,8 @@ const AboutPage = () => {
                                 })}
                         </div>
                         {/*  */}
-                        <div className="mt-4 lg:mt-6 pr-0 sm:pr-[10vw]">
-                            {"Actually working as freelancer both for agencies and private clients worldwide."
+                        <div className="mt-4 lg:mt-5 pr-0 xl:pr-[5vw]">
+                            {"I focus on writing clean code, crafting responsive layouts, and developing smooth user experiences that work across all screen sizes."
                                 .split(" ")
                                 .map((words, idx) => {
                                     return (
@@ -243,8 +243,8 @@ const AboutPage = () => {
                                 })}
                         </div>
                         {/*  */}
-                        <div className="mt-12">
-                            {"I like to understand people and, although I’m really creative I’m not an artist. I see design as a problem solving tool and the solution is always a bold project with communication that goes straight to the point. After my studies at the Academy of Fine Arts of Naples, I started as a graphic designer, then following my passions I have become a multidisciplinary designer, working on different fields, from Ui/Ux,illustrations, product design to branding and art direction."
+                        <div className="mt-8 lg:mt-10">
+                            {"I'm always learning and exploring new technologies to improve my craft. I enjoy solving problems and turning creative ideas into real products. I work with HTML, CSS, JavaScript, and modern tools like React to bring ideas to life. My goal is to build web experiences that are fast, accessible, and visually impactful. Every project is an opportunity to grow, collaborate, and create meaningful digital solutions that truly connect with users."
                                 .split(" ")
                                 .map((words, idx) => {
                                     return (

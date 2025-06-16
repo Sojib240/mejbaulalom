@@ -73,7 +73,7 @@ const MouseFollower = ({ Projects, mouseScale }) => {
         <>
             <div
                 ref={scaleDivRef}
-                className="fixed top-0 left-0 w-5 h-5 rounded-full pointer-events-none z-[9999] bg-color-white mix-blend-difference hidden lg:block"
+                className="fixed top-0 left-0 w-4 h-4 xl:w-4.5 xl:h-4.5 2xl:w-5 2xl:h-5 rounded-full pointer-events-none z-[9999] bg-color-white mix-blend-difference hidden lg:block"
                 style={{ transform: "translate(-50%,-50%)" }}
             />
             <div

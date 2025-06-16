@@ -38,7 +38,7 @@ const MouseFollower2 = () => {
     return (
         <div
             ref={mouseFollowRef}
-            className="fixed -top-0 left-[0%] w-[20vw] select-none aspect-square rounded-full pointer-events-none z-40 hidden lg:block"
+            className="fixed -top-0 left-[0%] lg:w-[300px] xl:w-[350px] 2xl:w-[400px] select-none aspect-square rounded-full pointer-events-none z-40 hidden lg:block"
             style={{ transform: "translate(-50%,-50%)" }}
         >
             <img

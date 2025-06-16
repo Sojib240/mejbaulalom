@@ -14,6 +14,13 @@ const App = () => {
     const mouseScale = useRef([]);
     return (
         <div>
+            <div className="fixed top-0 left-0 z-50 bg-transparent flex w-full h-screen">
+                <div className="w-[20%] h-full border-r border-color-black bg-transparent opacity-[0.06]"/>
+                <div className="w-[20%] h-full border-r bg-transparent opacity-[0.06]"/>
+                <div className="w-[20%] h-full border-r bg-transparent opacity-[0.06]"/>
+                <div className="w-[20%] h-full border-r bg-transparent opacity-[0.06]"/>
+                <div className="w-[20%] h-full border-r bg-transparent opacity-[0.06]"/>
+            </div>
             <LoadingAnimation />
             <MouseFollower Projects={Projects} mouseScale={mouseScale} />
             <MouseFollower2 />

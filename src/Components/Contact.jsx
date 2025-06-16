@@ -7,7 +7,10 @@ const Contact = ({ mouseScale }) => {
         window.scrollTo({ top: 0, behavior: "smooth" });
     };
     const social = [
-        { title: "Email", link: "mailto:sojib240320@gmail.com" },
+        {
+            title: "Email",
+            link: "https://mail.google.com/mail/?view=cm&fs=1&to=sojib240320@gmail.com",
+        },
         {
             title: "Facebook",
             link: "https://www.facebook.com/share/197eyr4wh3/",
