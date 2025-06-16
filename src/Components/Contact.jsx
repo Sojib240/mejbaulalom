@@ -30,7 +30,7 @@ const Contact = ({ mouseScale }) => {
             />
             <section className="relative contact select-none">
                 <div className="px-4 sm:px-6 md:px-8 lg:px-10">
-                    <div className="pt-15 pb-18 sm:pb-20 sm:pt-18 lg:pt-24 lg:pb-26 xl:pt-30 xl:pb-35 2xl:pt-36 2xl:pb-38">
+                    <div className="pt-15 pb-16 sm:pb-20 sm:pt-18 lg:pt-24 lg:pb-26 xl:pt-30 xl:pb-35 2xl:pt-36 2xl:pb-38">
                         <div className="overflow-hidden z-0">
                             <h2
                                 ref={contactTextRef}
@@ -64,7 +64,7 @@ const Contact = ({ mouseScale }) => {
                             })}
                         </div>
                     </div>
-                    <div className="pb-4.5 sm:pb-5.5 md:pb-7">
+                    <div className="pb-7">
                         <div className="text-center w-full flex justify-between items-center">
                             <div className="w-1/4 text-left z-50">
                                 <Link
@@ -95,7 +95,7 @@ const Contact = ({ mouseScale }) => {
                                 </button>
                             </div>
                         </div>
-                        <div className="sm:hidden flex items-center justify-center gap-2.5 lg:gap-3 xl:gap-4 text-xs lg:text-sm xl:text-base font-font1 w-full mt-2.5">
+                        <div className="sm:hidden flex items-center justify-center gap-2.5 lg:gap-3 xl:gap-4 text-xs lg:text-sm xl:text-base font-font1 w-full mt-5">
                             Available for a full-time position
                             <div className="relative w-1.5 h-1.5 sm:w-[8px] sm:h-[8px] rounded-full bg-color-pink">
                                 <span className="pulse absolute top-1/2 left-1/2 -translate-1/2 w-full h-full bg-color-pink rounded-full opacity-80" />
